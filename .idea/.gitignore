@@ -1,0 +1,116 @@
+# ─── macOS ──────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.apdisk
+
+# ─── Archivos Java compilados y empaquetados ───────────────────
+*.class
+*.jar
+*.war
+*.ear
+
+# ─── Directorios de build y salida ──────────────────────────────
+/target/
+/build/
+/out/
+/bin/
+/gen/
+/coverage/
+
+# ─── Maven ──────────────────────────────────────────────────────
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+release.properties
+*.log
+# Preserve Maven Wrapper
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+!mvnw
+!mvnw.cmd
+!.mvn/
+
+# ─── Gradle ─────────────────────────────────────────────────────
+.gradle/
+/build/
+# Preserve Gradle Wrapper
+!gradlew
+!gradlew.bat
+!gradle/wrapper/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# ─── IDEs comunes ───────────────────────────────────────────────
+## IntelliJ IDEA
+/.idea/
+/*.iml
+/shelf/
+/workspace.xml
+/httpRequests/
+/mavenHomeManager.xml
+/dataSources/
+/dataSources.local.xml
+
+## Eclipse
+/.metadata/
+/.project
+.classpath
+.settings/
+/tmp/
+/*.tmp
+
+## NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ─── Logs, temporales y de sistema ──────────────────────────────
+*.log
+*.tmp
+*.swp
+*.swo
+hs_err_pid*
+replay_pid*
+
+# ─── Cobertura y análisis de código ─────────────────────────────
+/coverage/
+/reports/
+/*.lcov
+
+# ─── Otros archivos inútiles ────────────────────────────────────
+*.lock
+/docker-compose.override.yml
+.env
+.env.local
+.env.*.local
+
+# ─── Configuración de editores y entornos ───────────────────────
+.settings/
+.vscode/
+
+# ─── Recursos generados ─────────────────────────────────────────
+/**/generated-sources/
+/**/generated-test-sources/
+/**/generated-docs/
+
+# ─── Documentación generada ────────────────────────────────────
+/docs/_book/
+/docs/_site/
+
+# ─── Distribuciones y binarios ──────────────────────────────────
+/dist/
+/release/**
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
