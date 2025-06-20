@@ -1,17 +1,45 @@
 package es.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import es.example.app.BibliotecaApp;
+import es.example.exception.RecursoNoDisponibleException;
+import es.example.model.Libro;
+import es.example.model.Publicacion;
+import es.example.model.Revista;
+import es.example.service.PublicacionService;
+import es.example.service.PublicacionServiceImpl;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+import java.util.logging.*;
+
+import java.util.ArrayList;
+
+public class Main {
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
+    public static void main(String[] args) {
+
+
+        Libro libro1 = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes");
+        Libro libro2 = new Libro("La Celestina", "Fernando de Rojas");
+
+
+        Revista revista1 = new Revista("Time", "New York Times");
+        Revista revista2 = new Revista("Rolling Stone", "Rolling Stone" );
+
+        ArrayList<Publicacion> inventario = new ArrayList<>();
+
+
+        inventario.add(libro1);
+        inventario.add(libro2);
+
+        inventario.add(revista1);
+        inventario.add(revista2);
+
+
+        PublicacionService service = new PublicacionServiceImpl(inventario);
+        BibliotecaApp app = new BibliotecaApp(service);
+        app.run();
+
+
+
     }
+
 }
