@@ -37,7 +37,6 @@ public class Magazine extends Publication implements Loanable {
         }
         setLoaned(true);
     }
-
     @Override
     public void returnResource() {
         setLoaned(false);

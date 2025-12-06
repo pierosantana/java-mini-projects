@@ -29,7 +29,6 @@ private boolean loaned;
     private void setLoaned(boolean loaned) {
         this.loaned = loaned;
     }
-
     @Override
     public void loan() {
         if(isLoaned()) {
