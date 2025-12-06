@@ -2,6 +2,7 @@ package model;
 
 public class Book extends Publication{
 private final String isbn;
+private boolean loaned;
 
 
     public Book(String author, String title, String isbn) {
@@ -16,5 +17,13 @@ private final String isbn;
 
     public String getIsbn() {
         return isbn;
+    }
+
+    public boolean isLoaned() {
+        return loaned;
+    }
+
+    public void setLoaned(boolean loaned) {
+        this.loaned = loaned;
     }
 }

@@ -3,6 +3,7 @@ package model;
 public class Magazine extends Publication {
 
     private final int issueNumber;
+    private boolean loaned;
 
 
     public Magazine(String author, String title, int issueNumber) {
@@ -16,5 +17,13 @@ public class Magazine extends Publication {
 
     public Integer getIssueNumber() {
         return issueNumber;
+    }
+
+    public boolean isLoaned() {
+        return loaned;
+    }
+
+    public void setLoaned(boolean loaned) {
+        this.loaned = loaned;
     }
 }
