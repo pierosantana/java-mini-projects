@@ -1,6 +1,9 @@
 package model;
 
-public class Magazine extends Publication {
+import exceptions.ResourceNotAvailableException;
+import loan.Loanable;
+
+public class Magazine extends Publication implements Loanable {
 
     private final int issueNumber;
     private boolean loaned;
@@ -23,7 +26,20 @@ public class Magazine extends Publication {
         return loaned;
     }
 
-    public void setLoaned(boolean loaned) {
+    private void setLoaned(boolean loaned) {
         this.loaned = loaned;
+    }
+
+    @Override
+    public void loan() {
+        if(isLoaned()) {
+            throw new ResourceNotAvailableException("The magazine has already been loaned");
+        }
+        setLoaned(true);
+    }
+
+    @Override
+    public void returnResource() {
+        setLoaned(false);
     }
 }
