@@ -14,9 +14,10 @@ Process a list of users with ages and genders, and:
 
 ### 📁 Structure
 ```
-src   
+ src   
   ├── model  
-  │   └── User.java  
+  │   ├── User.java
+  │   └── Gender.java 
   ├── service  
   │   └── UserProcessor.java  
   ├── util  
