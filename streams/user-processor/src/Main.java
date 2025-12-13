@@ -1,15 +1,43 @@
+import model.Gender;
+import model.User;
+import service.UserProcessor;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.OptionalDouble;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        List<User> users = new ArrayList<User>();
+
+        User u1 = new User("Piero", 32, Gender.MALE);
+        User u2 = new User("Isabel", 18, Gender.FEMALE);
+        User u3 = new User("Lupe", 26, Gender.OTHER);
+        User u4 = new User("Diego", 16, Gender.MALE);
+        User u5 = new User("Ross", 14, Gender.FEMALE);
+        User u6 = new User("Candas", 21, Gender.MALE);
+
+        users.add(u1);
+        users.add(u2);
+        users.add(u3);
+        users.add(u4);
+        users.add(u5);
+        users.add(u6);
+
+        UserProcessor usPro = new UserProcessor();
+
+        System.out.println(usPro.filterAdults(users));
+
+        System.out.println(usPro.groupByGender(users));
+
+        System.out.println(usPro.averageAge(users));
+
+
+
+
+
     }
 }
